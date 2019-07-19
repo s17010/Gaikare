@@ -19,7 +19,11 @@ html, body {
 .motion-type-5,
 .motion-type-5 div,
 .motion-type-6,
-.motion-type-6 div{
+.motion-type-6 div,
+.motion-type-7,
+.motion-type-7 div,
+.motion-type-8,
+.motion-type-8 div{
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
@@ -83,6 +87,20 @@ html, body {
 .motion-type-6 div:nth-child(2) { background-color: #E7BABB; }
 .motion-type-6 div:nth-child(3) { background-color: #B0D9D2; }
 
+
+/** type 7 **/
+
+.motion-type-7 div { transform-origin: left top; transform: rotate(-90deg); }
+.motion-type-7 div:nth-child(1) { background-color: #B4A2C9; }
+.motion-type-7 div:nth-child(2) { background-color: #E7BABB; }
+.motion-type-7 div:nth-child(3) { background-color: #B0D9D2; }
+
+/** type 8 **/
+
+.motion-type-8 div { transform: scale(0); }
+.motion-type-8 div:nth-child(1) { background-color: #71A9C7; }
+.motion-type-8 div:nth-child(2) { background-color: #548DAF; }
+.motion-type-8 div:nth-child(3) { background-color: #B0D9D2; }
 
 /*******************************************************************************************
  * animation
@@ -151,6 +169,26 @@ html, body {
   animation: fall-2 1.4s ease 14.4s forwards;
 }
 
+.motion-type-7 div:nth-child(1) {
+  animation: unrotate 1.4s ease 17.0s forwards;
+}
+.motion-type-7 div:nth-child(2) {
+  animation: unrotate 1.4s ease 17.2s forwards;
+}
+.motion-type-7 div:nth-child(3) {
+  animation: unrotate 1.4s ease 17.4s forwards;
+}
+
+.motion-type-8 div:nth-child(1) {
+  animation: scale 1.4s ease 20.0s forwards;
+}
+.motion-type-8 div:nth-child(2) {
+  animation: scale 1.4s ease 20.2s forwards;
+}
+.motion-type-8 div:nth-child(3) {
+  animation: scale 1.4s ease 20.4s forwards;
+}
+
 /*******************************************************************************************
  * keyframes
  *******************************************************************************************/
@@ -161,6 +199,11 @@ html, body {
 
 @keyframes rotate {
   from  {transform: rotate(90deg);}
+  to    {transform: rotate(0deg);}
+}
+
+@keyframes unrotate {
+  from  {transform: rotate(-90deg);}
   to    {transform: rotate(0deg);}
 }
 
