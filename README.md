@@ -1,1 +1,2 @@
 # Gaikare
+Gaikare.txt -> memo
